@@ -17,8 +17,6 @@
 	M=D
 
 	(SCREENLOOP)
-		@R0
-		M=M+1
 
 		@KBD
 		D=M
@@ -29,7 +27,8 @@
 		(BLACK)
 		@R0
 		A=M
-		M=1
+		M=0
+		M=!M
 		@END
 		0;JEQ
 
@@ -40,9 +39,10 @@
 
 		(END)
 		@R0
+		M=M+1
 		D=M
 		@KBD
-		D=D-M
+		D=D-A
 		@SCREENLOOP
 		D;JNE
 		@LOOP
