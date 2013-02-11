@@ -17,6 +17,9 @@ D=M
 @R3
 M=D
 
+@END
+D;JLE
+
 (LOOP)
 	@R0
 	D=M
