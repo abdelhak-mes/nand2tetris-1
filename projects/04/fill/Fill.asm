@@ -12,18 +12,18 @@
 
 (LOOP)
 	@SCREEN
-	D=M
+	D=A
 	@R0
 	M=D
 
 	(SCREENLOOP)
 		@R0
 		M=M+1
-		
+
 	@R0
 	D=M
 	@KBD
-	D=D-M
+	D=A-M
 	@SCREENLOOP
 	D;JNE
 	@LOOP
