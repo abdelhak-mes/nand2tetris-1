@@ -1,2 +1,2 @@
 *.out
-!projects/*.out
+/*.out
