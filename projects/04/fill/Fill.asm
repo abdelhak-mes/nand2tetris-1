@@ -20,10 +20,37 @@
 		@R0
 		M=M+1
 
+		@KBD
+		D=M
+
+		@WHITE
+		D;JEQ
+
+		(BLACK)
+		@R0
+		A=M
+		M=1
+		@END
+		0;JEQ
+
+		(WHITE)
+		@R0
+		A=M
+		M=0
+
+		(END)
+		@R0
+		D=M
+		@KBD
+		D=D-M
+		@SCREENLOOP
+		D;JNE
+		@LOOP
+		D;JEQ
 	@R0
 	D=M
 	@KBD
-	D=A-M
+	D=D-A
 	@SCREENLOOP
 	D;JNE
 	@LOOP
